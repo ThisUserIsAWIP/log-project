@@ -8,7 +8,7 @@ import { authenticate } from 'passport';
 import * as jwt from 'jsonwebtoken';
 import config from '../../config';
 
-const router = Router();
+let router = Router();
 
 
 //

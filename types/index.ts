@@ -1,11 +1,11 @@
 import { Request } from 'express';
 export interface User {
-    id: number,
-    username: string,
-    email: string,
-    password: string,
-    bio: string,
-    created: string
+    id?: number,
+    username?: string,
+    email?: string,
+    password?: string,
+    bio?: string,
+    created?: string
 };
 // journal is the basic feature most journaling apps offer, a place to write a journal entry
 export interface Journal {
@@ -32,17 +32,23 @@ export interface Exercise {
     exerciseid: number,
     exercisename: string,
     exercisedescription: string,
-    requiredequipment: string
+    requiredequipment: string,
+    demolink: string,
     created: string
 };
 
 // Will compile to "TodaysWorkout" variable in order to be passed into entry
 export interface DailyExercise {
     userid: User['id'],
+    date_string?: string,
     exerciseid: Exercise['exerciseid'],
-    completedexerciseid: number,
+    insertid: number,
     completedsets: number,
     completedreps: number,
+    exercisename?: Exercise['exercisename'],
+    exercisedescription?: Exercise['exercisedescription'],
+    requiredequipment?: Exercise['requiredequipment'],
+    demolink?: Exercise['demolink'],
     created: string
 };
 
@@ -100,3 +106,67 @@ export interface ReqUser extends Request {
 export interface Payload extends User {
     role?: number
 };
+
+export interface aDaysUserData {
+    completedexercises: [
+        {
+            userid: User['id'],
+            date_string?: string,
+            exerciseid: Exercise['exerciseid'],
+            insertid: number,
+            completedsets: number,
+            completedreps: number,
+            exercisename?: Exercise['exercisename'],
+            exercisedescription?: Exercise['exercisedescription'],
+            requiredequipment?: Exercise['requiredequipment'],
+            demolink?: Exercise['demolink'],
+            created: string
+        }
+    ],
+    completednotes: [
+        {
+            userid: User['id'],
+            noteid: number,
+            topic: string,
+            content: string,
+            created: string
+        }
+    ],
+    completedjournals: [
+        {
+            userid: User['id'],
+            journalid: number,
+            title: string,
+            content: string,
+            created: string
+        }
+    ],
+    consumedfood: [
+        {
+            userid: User['id'],
+            imageid: number,
+            imagename: string,
+            image: string,
+            created: string
+        }
+    ],
+    consumedwater: [
+        {
+            userid: User['id'],
+            waterid: number,
+            water: number,
+            created: string
+        }
+    ],
+    addedexercises: [
+        {
+            userid: User['id'],
+            exerciseid: number,
+            exercisename: string,
+            exercisedescription: string,
+            requiredequipment: string,
+            demolink: string,
+            created: string
+        }
+    ]
+}

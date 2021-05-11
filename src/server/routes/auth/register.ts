@@ -16,11 +16,12 @@ router.post('/', async (req, res) => {
     console.log(newUser)
     try {
         newUser.password = generateHash(newUser.password)
-            let thisUser = await db.users.CreateUser(newUser.name, newUser.email, newUser.password, newUser.bio)
+            let thisUser = await db.users.CreateUser(newUser.username, newUser.email, newUser.password, newUser.bio)
             const token = jwt.sign({ id: thisUser.insertid, email: thisUser.email, role: 1},
                 config.jwt.secret,
                 { expiresIn: '30d'}
                 );
+                console.log(token);
                 res.json(token);
     } catch (error) {
         console.log(error)
