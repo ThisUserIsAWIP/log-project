@@ -87,7 +87,7 @@ const Entries = () => {
                         }}>
                             <thead>
                                 <tr className="text-center">
-                                    <th align='center' colSpan='3'><h3>Completed Exercises</h3></th>
+                                    <th align='center' colSpan={3}><h3>Completed Exercises</h3></th>
                                 </tr>
                                 <tr>
                                     <th>Exercise</th>
@@ -195,7 +195,7 @@ const Entries = () => {
                             }}>
                                 <thead>
                                     <tr className="text-center">
-                                        <th align='center' colSpan='3'><h3>Hydration</h3></th>
+                                        <th align='center' colSpan={3}><h3>Hydration</h3></th>
                                     </tr>
                                     <tr>
                                         <th>8oz Glasses of Water</th>

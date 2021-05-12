@@ -146,7 +146,7 @@ const HealthHistory = () => {
                             }}>
                                 <thead>
                                     <tr className="text-center">
-                                        <th align='center' colSpan='3'><h3>Today's Exercises</h3></th>
+                                        <th align='center' colSpan={3}><h3>Today's Exercises</h3></th>
                                     </tr>
                                     <tr>
                                         <th>Exercise</th>
@@ -181,7 +181,7 @@ const HealthHistory = () => {
                             }}>
                                 <thead>
                                     <tr className="text-center">
-                                        <th align='center' colSpan='3'><h3>Today's Exercises</h3></th>
+                                        <th align='center' colSpan={3}><h3>Today's Exercises</h3></th>
                                     </tr>
                                     <tr>
                                         <th>Glasses</th>
