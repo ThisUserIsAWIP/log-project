@@ -61,8 +61,8 @@ const Home = () => {
                                     Click <Link to='/register'>here to register</Link> or click one of the buttons below to register or login to an account. Happy Logging!
                         </h5>
                         <s.ButtonGroup size="lg" className="mb-2">
-    <Link to='/register'><s.Button>Register</s.Button></Link>
-    <Link to='/login'><s.Button>Login</s.Button></Link>
+    <Link to='/register'><s.Button className='m-1'>Register</s.Button></Link>
+    <Link to='/login'><s.Button className='m-1'>Login</s.Button></Link>
     
   </s.ButtonGroup>
                             </div>
