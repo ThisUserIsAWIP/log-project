@@ -52,10 +52,10 @@ const Login = () => {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           borderColor: 'black'
-      }} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} type="text" className="form-control" placeholder='Password' aria-label="Recipient's username" aria-describedby="basic-addon2" />
+      }} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} type="password" className="form-control" placeholder='Password' aria-label="Recipient's username" aria-describedby="basic-addon2" />
                 <p className='card-subtext'>Don't have an account?<Link to={`/register`}>Register</Link></p>
                 <div className='d-flex justify-content-end'>
-                <button onClick={handleButtonClick} className="btn btn-outline-secondary" type="button" id="button-addon2">Login</button>
+                <button onClick={handleButtonClick} className="btn btn-outline-secondary m-2 p-1" type="button" id="button-addon2">Login</button>
                 </div>
                 </div>
             </div>

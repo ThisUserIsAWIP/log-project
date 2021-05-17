@@ -20,9 +20,9 @@ const FoodImageHistory = () => {
                 .then(reply => {
                     setAllFoodImages(reply)
                 })
-                .then(reply => console.log(allFoodImages))
+                
         } catch (error) {
-            console.log(error)
+            
         }
 
     }, [])

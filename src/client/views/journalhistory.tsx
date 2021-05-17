@@ -20,7 +20,7 @@ const JournalHistory = () => {
                 .then(reply => {
                     setAllJournals(reply)
                 })
-                .then(reply => console.log(allJournals))
+                
         } catch (error) {
             console.log(error)
         }

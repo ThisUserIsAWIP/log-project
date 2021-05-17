@@ -29,6 +29,7 @@ const Register = () => {
                 bio: userData.bio
 			});
 			localStorage.setItem(TOKEN_KEY, `${token}`);
+            history.push('/login')
             
 		} catch (error) {
 			
@@ -56,7 +57,7 @@ const Register = () => {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           borderColor: 'black'
-      }} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserName(e.target.value)} type="text" className="form-control" placeholder="Userame" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+      }} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserName(e.target.value)} type="username" autoComplete="username" className="form-control" placeholder="Userame" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                 <input style={{
           backgroundImage: "url(" + "https://www.myfreetextures.com/wp-content/uploads/2011/06/an-old-and-worn-parchment-paper-900x1093.jpg" + ")",
           backgroundPosition: 'center',
@@ -80,7 +81,7 @@ const Register = () => {
       }} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setBio(e.target.value)} type="text" className="form-control" placeholder="Bio" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                  <p className='card-subtext'>Have an account?<Link to={`/login`}>Login</Link></p>
                 <div className='d-flex justify-content-end'>
-                <button onClick={handleButtonClick} className="btn btn-outline-secondary" type="button" id="button-addon2">Register</button>
+                <button onClick={handleButtonClick} className="btn btn-outline-secondary m-2 p-1" type="button" id="button-addon2">Register</button>
                 </div>
                 </div>
             </div>

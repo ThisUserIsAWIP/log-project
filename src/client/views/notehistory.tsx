@@ -20,8 +20,7 @@ const NoteHistory = () => {
             apiService('/api/notes')
                 .then(noteRes => {
                     setAllNotes(noteRes)
-                    console.log(noteRes)
-                    console.log(allNotes)
+                    
                 })
         } catch (error) {
             console.log(error)

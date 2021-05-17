@@ -10,13 +10,13 @@ const Contact = () => {
 
     const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        console.log(values)
+        
         let res = await apiService('/api/contact', 'POST', {
             email: values.email,
             subject: values.subject,
             content: values.content
         })
-        console.log(res)
+        
         setValues(null)
     }
     return (

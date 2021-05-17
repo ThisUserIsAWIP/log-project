@@ -18,10 +18,10 @@ const HealthHistory = () => {
     const [allWater, setAllWater] = useState<Array<WaterInput>>(null)
     const [allAddedExercises, setAllAddedExercises] = useState<Array<Exercise>>(null)
 
-    console.log(selectedDate)
+    
             let date = selectedDate
             
-            console.log(date)
+            
 
     useEffect(() => {
         
@@ -46,7 +46,7 @@ const HealthHistory = () => {
         try {
             apiService('/api/exercisedates')
                 .then(reply => {
-                    console.log(reply)
+                    
                     setExerciseDates(reply)
                 })
 
@@ -60,7 +60,7 @@ const HealthHistory = () => {
         try {
             apiService(`/api/water/${date}`)
                 .then(reply => {
-                    console.log(reply)
+                    
                     setAllWater(reply)
                 })
         } catch (error) {

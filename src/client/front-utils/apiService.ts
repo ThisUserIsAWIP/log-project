@@ -22,9 +22,9 @@ export async function apiService<T = any>(uri: string, method: string = 'GET', d
         fetchOptions.body = JSON.stringify(data);
     }
     try {
-        console.log(uri, fetchOptions)
+        
         const res = await fetch(uri, fetchOptions);
-        console.log(res)
+        
         if (res.status === 400) {
             throw new Error('check fetch options')
         }

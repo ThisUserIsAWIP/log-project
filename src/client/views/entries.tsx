@@ -39,15 +39,15 @@ const Entries = () => {
 
         } else {
         try {
-            console.log(selectedDate)
+            
             apiService(`/apitoday/todayscompile/${selectedDate}`)
                 .then(reply => {
 
                     setADaysUserData(reply)
-                    console.log(reply)
+                    
                 })
         } catch (error) {
-            console.log(error)
+            
         }
     }
     }, [selectedDate])

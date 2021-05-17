@@ -152,7 +152,7 @@ const Input = () => {
     // Complete an exercise
     const CompletedExerciseClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        console.log(completedExerciseData)
+        
         try {
             apiService('/api/dailyexercises', "POST", completedExerciseData)
                 .then(reply => {
@@ -240,7 +240,7 @@ const Input = () => {
     // Post a note
     const PostNoteClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        console.log(completedExerciseData)
+        
         try {
             apiService('/api/notes', "POST", noteData)
                 .then(reply => {
@@ -319,7 +319,7 @@ const Input = () => {
                 .then(reply => {
                     setTodaysDailyExercises(reply)
                 })
-                .then(reply => console.log(reply))
+                
         } catch (error) {
             console.log(error)
         }
@@ -331,8 +331,8 @@ const Input = () => {
             apiService('/apitoday/todaysexercises')
                 .then(xRes => {
                     setTodaysAddedExercises(xRes)
-                    console.log(todaysAddedExercises)
-                    console.log(xRes)
+                    
+                    
                 })
         } catch (error) {
             console.log(error)
@@ -346,7 +346,7 @@ const Input = () => {
                 .then(reply => {
                     setTodaysFoodImages(reply)
                 })
-                .then(reply => console.log(todaysFoodImages))
+                
         } catch (error) {
             console.log(error)
         }
@@ -359,7 +359,7 @@ const Input = () => {
                 .then(reply => {
                     setTodaysJournals(reply)
                 })
-                .then(reply => console.log(todaysJournals))
+                
         } catch (error) {
             console.log(error)
         }
@@ -371,8 +371,7 @@ const Input = () => {
             apiService('/apitoday/todaysnotes')
                 .then(noteRes => {
                     setTodaysNotes(noteRes)
-                    console.log(noteRes)
-                    console.log(todaysNotes)
+                    
                 })
         } catch (error) {
             console.log(error)
@@ -405,10 +404,18 @@ const Input = () => {
             <s.Row >
                 <s.Col>
                     {/* tabs with various inputs */}
-                    <s.Tabs defaultActiveKey="notes" variant="pills" className='d-flex justify-content-center' id="inputTabs">
+                    <s.Tabs defaultActiveKey="notes" variant="pills" className='d-flex justify-content-center mt-3' style={{backgroundImage: "url(" + "https://www.myfreetextures.com/wp-content/uploads/2011/06/an-old-and-worn-parchment-paper-900x1093.jpg" + ")",
+                                                    backgroundPosition: 'center',
+                                                    backgroundSize: 'auto',
+                                                    backgroundRepeat: 'no-repeat',
+                                                    borderColor: 'black'}} id="inputTabs">
                         {/* exercise parent tab */}
                         <s.Tab eventKey="exercise" href='#exercises' title="Exercise">
-                            <s.Tabs defaultActiveKey="recordExercise" variant="pills" className='d-flex justify-content-center' id="exerciseTabs">
+                            <s.Tabs defaultActiveKey="recordExercise" variant="pills" className='d-flex justify-content-center' style={{backgroundImage: "url(" + "https://www.myfreetextures.com/wp-content/uploads/2011/06/an-old-and-worn-parchment-paper-900x1093.jpg" + ")",
+                                                    backgroundPosition: 'center',
+                                                    backgroundSize: 'auto',
+                                                    backgroundRepeat: 'no-repeat',
+                                                    borderColor: 'black'}} id="exerciseTabs">
                                 {/* new exercise child tab */}
                                 <s.Tab eventKey="Exercise" href='#newexercise' title="New Exercise">
                                     <s.Row className="d-flex justify-content-center">
